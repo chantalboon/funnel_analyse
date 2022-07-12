@@ -1,0 +1,10 @@
+pandas==1.3.5
+google-api-python-client
+google-cloud-bigquery
+google-auth
+oauth2client
+# plotly
+pyarrow
+xlsxwriter
+vincent
+numpy==1.22.0

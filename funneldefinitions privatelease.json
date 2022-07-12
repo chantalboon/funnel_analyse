@@ -1,0 +1,80 @@
+{"funnel":
+  {
+    "name": "Private lease aanvraag",
+    "funnel_scope": "User",
+    "funnel_type": "open",
+    "date_range": ["04-05-2022", "09-05-2022"],
+    "breakdown_dimension": "device Category",
+    "filters": [
+      {
+        "dimension": "device Category",
+        "condition": "regex",
+        "value":"desktop|mobile",
+        "filter_combiner" : null
+        }
+    ],
+    "steps": [
+      {
+        "stepnumber": 1,
+        "step": [
+          {
+            "dimension": "page",
+            "condition": "regex",
+            "value":"/auto/private-lease/anwb-private-lease/aanbod/.*",
+            "filter_combiner" : null
+          }
+        ]
+      },
+      {
+        "stepnumber": 2,
+        "step": [
+          {
+            "dimension":"page",
+            "condition": "regex",
+            "value":"/auto/private-lease/anwb-private-lease/aanvragen/samenstelling-auto-en-contract.*",
+            "filter_combiner" : "OR"
+          },
+          {
+            "dimension":"page",
+            "condition": "regex",
+            "value":"/auto/private-lease/anwb-private-lease/aanvragen/samenstelling-auto-en-contract.*",
+            "filter_combiner" : null
+          }
+        ]
+      },
+      {
+        "stepnumber": 3,
+        "step": [
+          {
+            "dimension":"page",
+            "condition": "regex",
+            "value":"/auto/private-lease/anwb-private-lease/aanvragen/persoonlijke-gegevens.*",
+            "filter_combiner" : null
+          }
+        ]
+      },
+      {
+        "stepnumber": 4,
+        "step": [
+          {
+            "dimension":"page",
+            "condition": "regex",
+            "value":"/auto/private-lease/anwb-private-lease/aanvragen/gegevens-controleren.*",
+            "filter_combiner" : null
+          }
+        ]
+      },
+      {
+        "stepnumber": 5,
+        "step": [
+          {
+            "dimension":"page",
+            "condition": "regex",
+            "value":"/auto/private-lease/aanvragen/bedankt",
+            "filter_combiner" : null
+          }
+        ]
+      }
+    ]
+  }
+}

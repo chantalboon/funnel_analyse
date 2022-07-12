@@ -1,0 +1,30 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "de67a989",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print('PyDev console: using IPython 8.0.1\\n')\n",
+    "\n",
+    "import sys; print('Python %s on %s' % (sys.version, sys.platform))\n",
+    "sys.path.extend(['C:\\\\Data\\\\Python\\\\scripts\\\\funnel_analyse', 'C:/Data/Python/scripts/funnel_analyse'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "8af67fa3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "notebook"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
