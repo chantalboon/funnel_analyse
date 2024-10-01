@@ -1,0 +1,43 @@
+{"funnel":
+  {
+  "funnelScope": "Session",
+  "funnelType": "closed",
+  "breakdownDimensions": [
+
+  ],
+  "dateRange": ["01-01-2021", "02-01-2021"],
+  "filters": [
+    {
+      "dimension": "device Category",
+      "condition": "=",
+      "value": "desktop"
+    }
+  ],
+  "steps": [
+    {"stepId": 1,
+      "step": [
+        {"dimension":"page",
+          "condition": "regex",
+          "value":"^/inloggen(#|\\?|\\&|$)"
+        }
+      ]
+    },
+    {"stepId": 2,
+      "step": [
+        {"dimension":"event action",
+          "condition": "regex",
+          "value":"^ssoLogin\\-?Success$"
+        }
+      ]
+    },
+    {"stepId": 3,
+      "step": [
+        {"dimension": "page",
+          "condition": "regex",
+          "value": "^/mijn-anwb($|.*)"
+        }
+      ]
+    }
+  ]
+}
+}

@@ -1,0 +1,52 @@
+{"funnel":
+  {
+  "funnelScope": "Session",
+  "funnelType": "open",
+  "breakdownDimensions": ["device Category"],
+  "dateRange": ["25-04-2022", "01-05-2022"],
+  "filters": [
+  ],
+  "steps": [
+    {"stepId": "pagina",
+      "step": [
+        {"dimension": "page",
+          "condition": "=",
+          "value":"/mijn-anwb/mijn-gegevens/mijn-algemene-gegevens"
+        }
+      ]
+    },
+    {"stepId": "start",
+      "step": [
+        {"dimension":"page",
+          "condition": "=",
+          "value":"/mijn-anwb/mijn-gegevens/mijn-algemene-gegevens"
+        },
+        {"dimension":"event category",
+          "condition": "=",
+          "value":"mijnanwb - Card Interaction"
+        },
+        {"dimension":"event action",
+          "condition": "=",
+          "value":"cardDataPersonalInformationEdit-Start"
+        }
+      ]
+    },
+    {"stepId": "succes",
+      "step": [
+        {"dimension":"page",
+          "condition": "=",
+          "value":"/mijn-anwb/mijn-gegevens/mijn-algemene-gegevens"
+        },
+        {"dimension":"event category",
+          "condition": "=",
+          "value":"mijnanwb - Card Interaction"
+        },
+        {"dimension":"event action",
+          "condition": "=",
+          "value":"cardDataPersonalInformationEdit-Success"
+        }
+      ]
+    }
+  ]
+}
+}
